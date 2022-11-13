@@ -1,0 +1,177 @@
+/* Color Scheme: https://coolors.co/9c89b8-f0a6ca-efc3e6-f0e6ef-b8bedd
+*/
+body{
+    background-color: #F0E6EF;
+    color: white;
+}
+#input-wrapper{
+    background-color: #9C89B8;
+    border-radius: 15px;
+    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+}
+.title{
+    color: white;
+    border-radius: 50%;
+    text-shadow: 6px 4px 4px rgba(0, 0, 0, 0.57);
+    user-select: none;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+#rei{
+    width: 20%;
+    height: 20%;
+    max-width: 50%;
+    max-height: 50%;
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.subtitle{
+    font-style: italic;
+    font-weight: normal;
+    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.57);
+}
+.subhead{
+    font-family: 'Fragment Mono', monospace;
+    color: #F0E6EF;
+    font-weight: bold;
+}
+#subhead{
+    text-decoration: none;
+    color: #F0E6EF;
+    
+}
+#subhead:hover{
+    color: black;
+    transition: 0.2s;
+}
+#git{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    transition: 0.2s;
+}
+#git:hover{
+    filter: invert(1%);
+    -webkit-filter: invert(1%);
+    -moz-filter: invert(1%);
+}
+#input{
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    border-bottom: 2px solid #B8BEDD;
+    border-radius: 3px;
+    caret-color: #F0A6CA;
+    font-family: 'Fragment Mono', monospace;
+    color: white;
+}
+#input::placeholder{
+    color: white;
+}
+.btn-outline-primary{
+    border-color:#F0A6CA;
+}
+#search-btn{
+    width: auto;
+    color: white;
+    outline: none;
+    font-family: 'Fragment Mono', monospace;
+}
+#search-btn:disabled{
+    border-color: #cccc;
+}
+#search-btn:hover{
+    background-color: #EFC3E6;
+    color: black;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+#topAnime-btn{
+    background-color: #EFC3E6;
+    border: none;
+    font-family: 'Comfortaa', cursive;
+
+}
+#topAnime-btn:hover{
+    background-color: transparent;
+    border: 1px solid;
+    border-color: #EFC3E6;
+    color: white;
+}
+#anime-wrapper{
+    background-color: #B8BEDD;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    visibility: hidden;
+}
+.anime-img, .anime-img2{
+    border: 5px solid;
+    border-color:#F0E6EF;
+    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+}
+.anime-img2{
+    width: 60%;
+    height: 60%;
+}
+.anime-img:hover{
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    cursor: pointer;
+}
+
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    border-radius: 50% !important;
+    color: #F0A6CA;
+}
+.pagination > .active > a {
+    color: black;
+    background-color:#EFC3E6 ;
+    border-color: #EFC3E6;
+
+
+    
+}
+.pagination > .active > a:hover{
+    background-color: #EFC3E6 ;
+    color: black;
+}
+.page-link{
+    color: black;
+    background-color: #F0E6EF;
+}
+.results{
+    font-family: 'Fragment Mono', monospace;
+}
+/*ANIME PAGE*/
+.anime-title{
+    font-family: 'Forum', cursive;
+    font-weight: bolder;
+}
+.j-title{
+    font-family: 'Rampart One', cursive;
+}
+.anime-subheader{
+    color: #F0E6EF;
+    font-weight: bold;
+    font-family: 'Forum', cursive;
+}
+.synop{
+    font-family: 'Rubik', sans-serif;
+}
+
