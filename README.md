@@ -1,2 +1,2 @@
 # AniFind
-An app to look up anime
+## Made with the [AnimeDB API](https://rapidapi.com/brian.rofiq/api/anime-db).
