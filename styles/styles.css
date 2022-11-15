@@ -126,6 +126,8 @@ body{
     height: max-content;
     background-color: rgba(0, 0, 0, 0.6);
     color: #F0E6EF;
+    font-family: 'Fragment Mono', monospace;
+    
     transform: translate(0px, -200px);
     animation:img-text-fade 0.5s 1;
     -webkit-animation:img-text-fade 0.5s 1;
