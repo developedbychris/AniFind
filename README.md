@@ -1,4 +1,4 @@
-[Rei](imgs/rei.gif?raw=true)
+![Rei](imgs/rei.gif?raw=true)
 # AniFind is a simple app to look up anime based on rank.
 ## Made with the [AnimeDB API](https://rapidapi.com/brian.rofiq/api/anime-db).
 ### Link [here](https://ultimatechrisu.github.io/AniFind/)
