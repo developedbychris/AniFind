@@ -73,7 +73,7 @@ try {
                 imageDiv.appendChild(img)
                 //Event to OPEN anime info_______________
 	            img.addEventListener('click', ()=>{
-	                location.assign(`/anime.html#${anime.data[i]._id}`)
+	                location.assign(`anime.html#${anime.data[i]._id}`)
 	
 	            })
 		//IMAGE TEXT
