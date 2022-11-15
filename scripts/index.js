@@ -79,7 +79,7 @@ try {
 		//IMAGE TEXT
 		const imgText = document.createElement('p')
 		imgText.innerText = 'Tap for more info'
-		imgText.setAttribute('class', 'img-text h4')
+		imgText.setAttribute('class', 'img-text h5')
 		imageDiv.appendChild(imgText)
 	        //Title
                 const animeTitle = document.createElement('p')
