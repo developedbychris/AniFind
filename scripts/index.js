@@ -68,7 +68,7 @@ try {
 		animeDiv.appendChild(imageDiv)
 		//IMG
 	        const img = document.createElement('img')
-                img.setAttribute('class', 'anime-img mb-4')
+                img.setAttribute('class', 'anime-img mb-3')
                 img.src = anime.data[i].image
                 imageDiv.appendChild(img)
                 //Event to OPEN anime info_______________
