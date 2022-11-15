@@ -63,17 +63,25 @@ try {
 	            const animeDiv = document.createElement('div')
 	            animeDiv.setAttribute('class', 'col-12 align-items-center col-md-6 anime')
 	            animeWrapper.appendChild(animeDiv)
-                //IMG
-	            const img = document.createElement('img')
+		//Image Div
+		const imageDiv = document.createElement('div')
+		animeDiv.appendChild(imageDiv)
+		//IMG
+	        const img = document.createElement('img')
                 img.setAttribute('class', 'anime-img mb-4')
                 img.src = anime.data[i].image
-                animeDiv.appendChild(img)
+                imageDiv.appendChild(img)
                 //Event to OPEN anime info_______________
 	            img.addEventListener('click', ()=>{
-	                location.assign(`anime.html#${anime.data[i]._id}`)
+	                location.assign(`/anime.html#${anime.data[i]._id}`)
 	
 	            })
-	            //Title
+		//IMAGE TEXT
+		const imgText = document.createElement('p')
+		imgText.innerText = 'Tap for more info'
+		imgText.setAttribute('class', 'img-text h4')
+		imageDiv.appendChild(imgText)
+	        //Title
                 const animeTitle = document.createElement('p')
                 animeTitle.innerText = anime.data[i].title
                 animeTitle.setAttribute('class', 'h4 anime-title text-center')
