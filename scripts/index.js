@@ -218,13 +218,16 @@ if(input){
 
 if(topAnimeBtn){
     topAnimeBtn.addEventListener('click', ()=>{
-	if(input.value.length !== 0){
-		input.value = ''
-		getAnime()
-	} 
+		if(input.value.length !== 0){
+			input.value = ''
+			getAnime()
+		} else{
+			getAnime()
+		} 
 		
 	})
 }
+
 
 
 
