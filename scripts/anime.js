@@ -69,6 +69,11 @@ const genAnime = async (animeID) =>{
         genres.innerText = `Genre: ${anime.genres.join(', ')}`
         }
       textDiv.appendChild(genres)
+      //EPISODES
+      const episodes = document.createElement('p')
+      episodes.setAttribute('class', 'h5 anime-subheader')
+      episodes.innerText = `Episodes: ${anime.episodes}`
+      textDiv.appendChild(episodes)
       //Type
       const aniType = document.createElement('p')
       aniType.innerText = `Type: ${anime.type}`
