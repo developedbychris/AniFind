@@ -27,7 +27,7 @@ try {
 	    }
 	    
 
-	    const response = await fetch(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=10&search=${animeName}&sortOrder=desc`, options)
+	    const response = await fetch(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=10&search=${animeName}&sortOrder=asc`, options)
 	    
 	    //To clear results if new search is detected
 	    if (animeWrapper.childNodes.length > 5){
