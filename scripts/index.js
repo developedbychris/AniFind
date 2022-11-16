@@ -58,34 +58,34 @@ try {
 	
 	        //HTML Elements (ONLY TITLE RANK AND TYPE)
 	        for (let i = 0; i < anime.data.length; i++) {
-	
                 //Div Wrapper For Anime Object
 	            const animeDiv = document.createElement('div')
 	            animeDiv.setAttribute('class', 'col-12 align-items-center col-md-6 anime')
 	            animeWrapper.appendChild(animeDiv)
-		//Image Div
-		const imageDiv = document.createElement('div')
-		animeDiv.appendChild(imageDiv)
-		//IMG
-	        const img = document.createElement('img')
+                //Image Div
+				const imageDiv = document.createElement('div')
+				animeDiv.appendChild(imageDiv)
+				//IMG
+	            const img = document.createElement('img')
                 img.setAttribute('class', 'anime-img mb-3')
                 img.src = anime.data[i].image
                 imageDiv.appendChild(img)
                 //Event to OPEN anime info_______________
 	            img.addEventListener('click', ()=>{
-	                location.assign(`anime.html#${anime.data[i]._id}`)
+	                location.assign(`/anime.html?a=${i}#${anime.data[i]._id}`)
 	
 	            })
-		//IMAGE TEXT
-		const imgText = document.createElement('p')
-		imgText.innerText = 'Tap for more info'
-		imgText.setAttribute('class', 'img-text h5')
-		imageDiv.appendChild(imgText)
-	        //Title
+				//IMAGE TEXT
+				const imgText = document.createElement('p')
+				imgText.innerText = 'Tap for more info'
+				imgText.setAttribute('class', 'img-text h5')
+				imageDiv.appendChild(imgText)
+	            //Title
                 const animeTitle = document.createElement('p')
                 animeTitle.innerText = anime.data[i].title
                 animeTitle.setAttribute('class', 'h4 anime-title text-center')
 	            animeDiv.appendChild(animeTitle)
+				localStorage.setItem(`title${[i]}`,(animeTitle.innerText))
                 //Rank
 	            const ranking = document.createElement('p')
                 if(anime.data[i].ranking === 0){
@@ -95,11 +95,22 @@ try {
                 }
                 ranking.setAttribute('class','h5 anime-subheader')
                 animeDiv.appendChild(ranking)
+				localStorage.setItem(`rank${[i]}`, (anime.data[i].ranking))
                 //Type
 	            const animeType = document.createElement('p')
                 animeType.innerText = `Type: ${anime.data[i].type}`
                 animeType.setAttribute('class','h5 anime-subheader')
 	            animeDiv.appendChild(animeType)
+				localStorage.setItem(`type${[i]}`, (anime.data[i].type))
+	            //EXTRA LOCAL STORAGE DATA
+				localStorage.setItem(`id${[i]}`, (anime.data[i]._id))
+				const regex = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
+				localStorage.setItem(`jp-title${[i]}`, (anime.data[i].alternativeTitles.filter(title => title.match(regex))))
+				localStorage.setItem(`image${[i]}`, (anime.data[i].image))
+				localStorage.setItem(`mal-link${[i]}`, (anime.data[i].link))
+				localStorage.setItem(`episodes${[i]}`, (anime.data[i].episodes))
+				localStorage.setItem(`synopsis${[i]}`, (anime.data[i].synopsis))
+				localStorage.setItem(`genre${[i]}`, (anime.data[i].genres.join(', ')))
 	            
 	            //insert
 	            animeWrapper.insertBefore(animeDiv, pagesDiv)
