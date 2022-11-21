@@ -27,7 +27,7 @@ try {
 	    }
 	    
 
-	    const response = await fetch(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=10&search=${animeName}&sortOrder=asc`, options)
+	    const response = await fetch(`https://anime-db.p.rapidapi.com/anime?page=${page}&size=12&search=${animeName}&sortOrder=asc`, options)
 	    
 	    //To clear results if new search is detected
 	    if (animeWrapper.childNodes.length > 5){
@@ -35,6 +35,7 @@ try {
 	       pagesDiv.innerHTML = ''
 	       topPages.innerHTML = ''
 	       results.innerHTML=  ''
+		   localStorage.clear()
 	    } 
 	
 	    //If API Call is successful
@@ -51,57 +52,66 @@ try {
             }
 	        results.setAttribute('class', 'h5 mt-5 mb-4 results')
             results.style.textDecoration = 'none'
-            results.style.color = 'black'
+            results.style.color = 'white'
 	        animeWrapper.appendChild(results)
 	        animeWrapper.insertBefore(results, topPages)
 	        
 	
 	        //HTML Elements (ONLY TITLE RANK AND TYPE)
 	        for (let i = 0; i < anime.data.length; i++) {
-                //Div Wrapper For Anime Object
+			
+                //Card Height Equal Div
 	            const animeDiv = document.createElement('div')
-	            animeDiv.setAttribute('class', 'col-12 align-items-center col-md-6 anime')
+	            animeDiv.setAttribute('class', 'col-12 col-md-3 d-flex align-items-stretch') 
 	            animeWrapper.appendChild(animeDiv)
-                //Image Div
-				const imageDiv = document.createElement('div')
-				animeDiv.appendChild(imageDiv)
-				//IMG
-	            const img = document.createElement('img')
-                img.setAttribute('class', 'anime-img mb-3')
+				
+				//Div Wrapper For Anime Object
+				const cardDiv = document.createElement('div')
+				cardDiv.setAttribute('class','card mx-3 my-3 anime')
+				cardDiv.style.width = '18rem'
+				animeDiv.appendChild(cardDiv)
+				cardDiv.addEventListener('click', ()=>{
+	                location.assign(`anime.html?a=${i}#${anime.data[i]._id}`)
+	            }) 
+
+				//Card IMG
+	        	const img = document.createElement('img')
+                img.setAttribute('class', 'card-img-top anime-img mb-3')
                 img.src = anime.data[i].image
-                imageDiv.appendChild(img)
+                cardDiv.appendChild(img)                                  
                 //Event to OPEN anime info_______________
 	            img.addEventListener('click', ()=>{
-	                location.assign(`anime.html?a=${i}#${anime.data[i]._id}`)
-	
+	                location.assign(`./anime.html?a=${i}#${anime.data[i]._id}`)
 	            })
-				//IMAGE TEXT
-				const imgText = document.createElement('p')
-				imgText.innerText = 'Tap for more info'
-				imgText.setAttribute('class', 'img-text h5')
-				imageDiv.appendChild(imgText)
-	            //Title
-                const animeTitle = document.createElement('p')
+				
+				//Card Div
+				const cardbodyDiv = document.createElement('div')
+				cardbodyDiv.setAttribute('class','card-body')
+				cardDiv.appendChild(cardbodyDiv)
+
+	    		//Card Title
+                const animeTitle = document.createElement('h5')
                 animeTitle.innerText = anime.data[i].title
-                animeTitle.setAttribute('class', 'h4 anime-title text-center')
-	            animeDiv.appendChild(animeTitle)
+                animeTitle.setAttribute('class', 'card-title text-wrap anime-title')
+	            cardbodyDiv.appendChild(animeTitle)
 				localStorage.setItem(`title${[i]}`,(animeTitle.innerText))
-                //Rank
+                
+				//Rank
 	            const ranking = document.createElement('p')
                 if(anime.data[i].ranking === 0){
                     ranking.innerText = `MAL Rank: N/A`
                 } else{
                 ranking.innerText = `MAL Rank: ${anime.data[i].ranking}`
                 }
-                ranking.setAttribute('class','h5 anime-subheader')
-                animeDiv.appendChild(ranking)
-				localStorage.setItem(`rank${[i]}`, (anime.data[i].ranking))
-                //Type
+                ranking.setAttribute('class','card-text anime-subheader')
+                cardbodyDiv.appendChild(ranking)
+                localStorage.setItem(`rank${[i]}`, (anime.data[i].ranking))
+				//Type
 	            const animeType = document.createElement('p')
                 animeType.innerText = `Type: ${anime.data[i].type}`
-                animeType.setAttribute('class','h5 anime-subheader')
-	            animeDiv.appendChild(animeType)
-				localStorage.setItem(`type${[i]}`, (anime.data[i].type))
+                animeType.setAttribute('class','card-text anime-subheader')
+	            cardbodyDiv.appendChild(animeType)
+	            localStorage.setItem(`type${[i]}`, (anime.data[i].type))
 	            //EXTRA LOCAL STORAGE DATA
 				localStorage.setItem(`id${[i]}`, (anime.data[i]._id))
 				const regex = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
@@ -110,13 +120,11 @@ try {
 				localStorage.setItem(`mal-link${[i]}`, (anime.data[i].link))
 				localStorage.setItem(`episodes${[i]}`, (anime.data[i].episodes))
 				localStorage.setItem(`synopsis${[i]}`, (anime.data[i].synopsis))
-				localStorage.setItem(`genre${[i]}`, (anime.data[i].genres.join(', ')))
-	            
+				localStorage.setItem(`genre${[i]}`, (anime.data[i].genres.join(', ')))				
 	            //insert
 	            animeWrapper.insertBefore(animeDiv, pagesDiv)
-	
-	            
 	        }
+
 	        //_________Pagination Buttons________//
 	        let beforePages = currentPage - 1
 	        let afterPages = currentPage + 1
@@ -124,9 +132,9 @@ try {
 	        let liActive
 	        
 	        const ulPaginationDiv = document.createElement('ul')
-	        ulPaginationDiv.setAttribute('class', 'pagination pagination-lg justify-content-center')
+	        ulPaginationDiv.setAttribute('class', 'pagination pagination-lg my-3 justify-content-center')
 	        const topUlPaginationDiv = document.createElement('ul')
-	        topUlPaginationDiv.setAttribute('class', 'pagination pagination-lg justify-content-center')
+	        topUlPaginationDiv.setAttribute('class', 'pagination pagination-lg my-3 justify-content-center')
 	        pagesDiv.appendChild(ulPaginationDiv)
 	        topPages.appendChild(topUlPaginationDiv)
 	        if(currentPage > 1){
@@ -136,6 +144,7 @@ try {
 	            </a>`
 	            
 	        }
+
 	        //Creating Page Numbers
 	        for (let i = beforePages; i <= afterPages; i++){
 	            
@@ -178,6 +187,7 @@ try {
 	            }, false)
 	
 	        })
+			
 	        //FORWARD-BACK PAGE BUTTON LOGIC
 	        if(document.querySelector('.page-fwd') !== null){
 	            document.querySelector('.page-fwd').addEventListener('click', ()=>getAnime(currentPage + 1), false)
@@ -238,7 +248,6 @@ if(topAnimeBtn){
 		
 	})
 }
-
 
 
 
