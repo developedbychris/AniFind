@@ -62,7 +62,7 @@ try {
 			
                 //Card Height Equal Div
 	            const animeDiv = document.createElement('div')
-	            animeDiv.setAttribute('class', 'col-12 col-md-3 d-flex align-items-stretch') 
+	            animeDiv.setAttribute('class', 'col-12 col-lg-3 col-md-4 col-sm-5 d-flex align-items-stretch') 
 	            animeWrapper.appendChild(animeDiv)
 				
 				//Div Wrapper For Anime Object
