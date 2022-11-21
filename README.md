@@ -16,6 +16,8 @@ Language used HTML, CSS, JS & Bootstrap 5.0
 - List 12 Anime on page
 - Cross platform
 
+API AnimeDB Link [here](https://rapidapi.com/brian.rofiq/api/anime-db/)
+
 Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 
