@@ -1,125 +1,156 @@
 /* Color Scheme: https://coolors.co/9c89b8-f0a6ca-efc3e6-f0e6ef-b8bedd
 */
+
+/* bootstrap icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+
+*{
+    box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+}
+
 body{
-    background-color: #F0E6EF;
+    background-image: linear-gradient(to right top, #f0a6ca, #e0add7, #d0b3de, #c2b9e0, #b8bedd);
     color: white;
 }
-#input-wrapper{
-    background-color: #9C89B8;
-    border-radius: 15px;
-    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-}
+
 .title{
     color: white;
-    border-radius: 50%;
-    text-shadow: 6px 4px 4px rgba(0, 0, 0, 0.57);
     user-select: none;
-    font-family: 'Comfortaa', cursive;
-
+    font-family: 'Bebas Neue', cursive;
+    margin-left: 0;
 }
 
 #rei{
-    width: 20%;
-    height: 20%;
+    width: 15%;
+    height: 15%;
     max-width: 50%;
     max-height: 50%;
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
+
 .subtitle{
     font-style: italic;
     font-weight: normal;
     text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.57);
 }
+
 .subhead{
     font-family: 'Fragment Mono', monospace;
     color: #F0E6EF;
     font-weight: bold;
 }
+
 #subhead{
     text-decoration: none;
-    color: #F0E6EF;
-    
+    color: #F0E6EF; 
 }
+
 #subhead:hover{
     color: black;
     transition: 0.2s;
 }
-#git{
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
-    -moz-filter: invert(100%);
-    transition: 0.2s;
-}
-#git:hover{
-    filter: invert(1%);
-    -webkit-filter: invert(1%);
-    -moz-filter: invert(1%);
-}
+
+
+/* Search Bar */
 #input{
-    width: 70%;
+    width: 50%;
     border: none;
     outline: none;
-    background-color: transparent;
-    text-align: center;
-    border-bottom: 2px solid #B8BEDD;
-    border-radius: 3px;
-    caret-color: #F0A6CA;
+    border-bottom: 2px solid #f0d1ea; /*#B8BEDD;*/
+    border-radius: 18px;
+    caret-color: #9c89b8;
     font-family: 'Fragment Mono', monospace;
-    color: white;
+    color: #4a4a4a;
+    padding: 10px;
 }
+
 #input::placeholder{
-    color: white;
+    color: #8b8b8b;
 }
-.btn-outline-primary{
-    border-color:#F0A6CA;
-}
+
 #search-btn{
     width: auto;
-    color: white;
-    outline: none;
-    font-family: 'Fragment Mono', monospace;
+    height: 10%;
+    background-color: white;
+    border-radius: 18px;
+    /* font-family: 'Fragment Mono', monospace; */
 }
+
 #search-btn:disabled{
     border-color: #cccc;
 }
+
 #search-btn:hover{
-    background-color: #EFC3E6;
+    background-color: #b8bedd;
     color: black;
+    box-shadow: 0 0 4px 1px #f0d1ea;
     outline: none;
     border: none;
     transition: 0.3s;
 }
+
+/* Top Anime Button */
 #topAnime-btn{
-    background-color: #EFC3E6;
+    outline: none;
     border: none;
-    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #000;
+    border-radius: 0;
 
 }
 #topAnime-btn:hover{
     background-color: transparent;
     border: 1px solid;
-    border-color: #EFC3E6;
+    border-color: #fff;
     color: white;
 }
+
+/* Div of Anime list */
+.card{
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    cursor: pointer;
+}
+
 #anime-wrapper{
-    background-color: #B8BEDD;
     color: black;
-    border-radius: 15px;
-    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
     visibility: hidden;
 }
-.anime-img, .anime-img2{
-    border: 5px solid;
-    border-color:#F0E6EF;
-    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -webkit-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
-    -moz-box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+
+#anime-info{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
 }
+
+.anime-img, .anime-img2{
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.anime-img2{
+    border-radius: 10px;
+    box-shadow: 10px 9px 15px -1px rgba(0,0,0,0.32);
+}
+
+@media only screen and (max-width: 768px) {
+    .anime-img{
+     height: 50vh;
+    }
+ }
+
+ /* No uses */
 .img-text{
     margin: auto;
     width: max-content;
@@ -138,10 +169,12 @@ body{
     user-select: none;
     transition: 0.3s;
 }
+
 @keyframes img-text-fade {
     from {opacity :1;}
     to {opacity :0;}
 }
+
 @-webkit-keyframes img-text-fade{
     from {opacity :1;}
     to {opacity :0;}
@@ -151,13 +184,36 @@ body{
     width: 60%;
     height: 60%;
 }
+/*-----*/
+
 .anime-img:hover{
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     cursor: pointer;
 }
+
 .anime-img:hover ~ .img-text{
     opacity: 0;
+}
+
+
+.btn-mal{
+    background-image: url('../imgs/MyAnimeList_Logo.png');
+    background-size: 55px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 5px;
+    color: transparent;
+    display: block;
+}
+
+.btn-mal:hover{
+    color: transparent;
+}
+
+/* Pagination */
+
+.pagination > li {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pagination > li > a:focus,
@@ -165,42 +221,104 @@ body{
 .pagination > li > span:focus,
 .pagination > li > span:hover
 {
-    border-radius: 50% !important;
-    color: #F0A6CA;
+    color: #b8bedd;
 }
 .pagination > .active > a {
     color: black;
-    background-color:#EFC3E6 ;
-    border-color: #EFC3E6;
-
-
+    background-color:#f0d1ea ;
+    border-color: #f0d1ea;
     
 }
 .pagination > .active > a:hover{
-    background-color: #EFC3E6 ;
+    background-color: #f0d1ea ;
     color: black;
 }
+
 .page-link{
     color: black;
     background-color: #F0E6EF;
 }
+
+/* Search Results */
 .results{
-    font-family: 'Fragment Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
 }
+
 /*ANIME PAGE*/
 .anime-title{
-    font-family: 'Forum', cursive;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #000;
 }
+
+.anime-title2{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #000;
+}
+
 .j-title{
     font-family: 'Rampart One', cursive;
+    color: #000;
 }
 .anime-subheader{
-    color: #F0E6EF;
-    font-weight: bold;
-    font-family: 'Forum', cursive;
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    text-align: center;
 }
+
+.rank{
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 50px;
+    color: white;
+}
+
 .synop{
     font-family: 'Rubik', sans-serif;
+    color: #000;
+}
+
+/* Credit Div*/
+.credit{
+    background-color: rgb(80, 66, 102, 0.1);
+    height: 40vh;
+    margin: 0;
+    bottom: 0;
+    overflow: hidden;
+    max-height: 80vh;
+}
+
+@media only screen and (max-width: 600px) {
+   .credit{
+    height: 43vh;
+    overflow: hidden;
+   }
+}
+
+.git{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+#git{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    transition: 0.2s;
+}
+#git:hover{
+    filter: invert(1%);
+    -webkit-filter: invert(1%);
+    -moz-filter: invert(1%);
 }
 
