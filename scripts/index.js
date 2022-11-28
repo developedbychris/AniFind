@@ -67,7 +67,7 @@ try {
 				
 				//Div Wrapper For Anime Object
 				const cardDiv = document.createElement('div')
-				cardDiv.setAttribute('class','card mx-3 my-3 anime')
+				cardDiv.setAttribute('class','card mx-auto my-3 anime')
 				cardDiv.style.width = '18rem'
 				animeDiv.appendChild(cardDiv)
 				cardDiv.addEventListener('click', ()=>{
