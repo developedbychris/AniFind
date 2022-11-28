@@ -44,7 +44,7 @@ const genAnime = () =>{
       animeWrapper.appendChild(imageDiv)
       //TEXT DIV
       const textDiv = document.createElement('div')
-      textDiv.setAttribute('class', 'p-5 col-12 col-md-6 anime text-md-start')
+      textDiv.setAttribute('class', 'p-5 col-12 col-md-6 anime')
       animeWrapper.appendChild(textDiv)
 
       //IMG
@@ -93,13 +93,13 @@ const genAnime = () =>{
       //MAL Page Button
       const malBtn = document.createElement('button')
       malBtn.innerText = `MAL`
-      malBtn.setAttribute('class', 'btn btn-mal  mt-2 mb-4')
+      malBtn.setAttribute('class', 'btn mx-auto btn-mal mt-2 mb-4')
       malBtn.addEventListener('click', ()=> parent.open(localStorage.getItem(`mal-link${animeIndex}`)))
       textDiv.appendChild(malBtn)
       //Synopsis
       const synop = document.createElement('p')
       synop.innerText = localStorage.getItem(`synopsis${animeIndex}`)
-      synop.classList.add('synop')
+      synop.setAttribute('class', 'synop text-start')
       textDiv.appendChild(synop)
 
     
@@ -107,5 +107,3 @@ const genAnime = () =>{
 }
 
 genAnime()
-
-
