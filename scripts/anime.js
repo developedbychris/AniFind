@@ -108,4 +108,4 @@ const genAnime = () =>{
 
 genAnime()
 
-window.onbeforeunload = ()=> localStorage.clear()
+
