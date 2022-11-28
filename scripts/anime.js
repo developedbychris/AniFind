@@ -15,18 +15,6 @@ const pageID = location.hash.substring(1)
 const params = new URLSearchParams(location.search)
 const animeIndex = parseInt(params.get("a"))
 
-//  Clears localStorage except for requested anime
-window.addEventListener('DOMContentLoaded', ()=>{
-  for (let i = 0; i < localStorage.length; i++) {
-    if (i === animeIndex) {continue}
-    localStorage.removeItem(`title${i}`)
-    localStorage.removeItem(`rank${i}`)
-    localStorage.removeItem(`type${i}`)
-    localStorage.removeItem(`id${i}`)
-    localStorage.removeItem(`genre${i}`)
-  }
-})
-
 const genAnime = () =>{
    
   
