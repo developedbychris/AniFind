@@ -57,7 +57,8 @@ body{
 
 /* Search Bar */
 #input{
-    width: 50%;
+    width: 64%;
+    min-width: 64%;
     border: none;
     outline: none;
     border-bottom: 2px solid #f0d1ea; /*#B8BEDD;*/
@@ -108,6 +109,8 @@ body{
     border: 1px solid;
     border-color: #fff;
     color: white;
+    transition: 0.5s;
+    border-radius: 10px;
 }
 
 /* Div of Anime list */
@@ -150,7 +153,7 @@ body{
     }
  }
 
- /* No uses */
+/*no uses*/
 .img-text{
     margin: auto;
     width: max-content;
@@ -158,7 +161,6 @@ body{
     background-color: rgba(0, 0, 0, 0.6);
     color: #F0E6EF;
     font-family: 'Fragment Mono', monospace;
-    
     transform: translate(0px, -200px);
     animation:img-text-fade 0.5s 1;
     -webkit-animation:img-text-fade 0.5s 1;
@@ -199,11 +201,11 @@ body{
     background-image: url('../imgs/MyAnimeList_Logo.png');
     background-size: 55px;
     background-position: center center;
-    background-repeat: no-repeat;
-    border: 0;
-    border-radius: 5px;
+    
+    border: none;
+    border-radius: 10%;
     color: transparent;
-    display: block;
+    
 }
 
 .btn-mal:hover{
@@ -286,7 +288,15 @@ body{
     font-family: 'Rubik', sans-serif;
     color: #000;
 }
-
+.readmore{
+    background-color: #b8bedd;
+    outline: none;
+    border: none;
+}
+.readmore:hover{
+    background-color: #9c89b8;
+    color: white;
+}
 /* Credit Div*/
 .credit{
     background-color: rgb(80, 66, 102, 0.1);
