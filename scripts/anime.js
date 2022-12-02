@@ -15,6 +15,18 @@ const pageID = location.hash.substring(1)
 const params = new URLSearchParams(location.search)
 const animeIndex = parseInt(params.get("a"))
 
+//  Clears localStorage except for requested anime
+window.addEventListener('DOMContentLoaded', ()=>{
+  for (let i = 0; i < localStorage.length; i++) {
+    if (i === animeIndex) {continue}
+    localStorage.removeItem(`title${i}`)
+    localStorage.removeItem(`rank${i}`)
+    localStorage.removeItem(`type${i}`)
+    localStorage.removeItem(`id${i}`)
+    localStorage.removeItem(`genre${i}`)
+  }
+})
+
 const genAnime = () =>{
    
   
@@ -86,12 +98,38 @@ const genAnime = () =>{
       textDiv.appendChild(malBtn)
       //Synopsis
       const synop = document.createElement('p')
-      synop.innerText = localStorage.getItem(`synopsis${animeIndex}`)
+      if(localStorage.getItem(`synopsis${animeIndex}`).length > 0 && localStorage.getItem(`synopsis${animeIndex}`).length < 200){
+        
+        synop.innerText = localStorage.getItem(`synopsis${animeIndex}`)
+        textDiv.appendChild(synop)
+      } else if (localStorage.getItem(`synopsis${animeIndex}`).length > 400){
+        
+        let displayText = `${localStorage.getItem(`synopsis${animeIndex}`).slice(0, 400)}...`
+        let fullText = localStorage.getItem(`synopsis${animeIndex}`)
+        synop.innerText = displayText
+        textDiv.appendChild(synop)
+        
+        //Read More Button
+        const readMoreBtn = document.createElement('button')
+        readMoreBtn.innerText = 'Read More'
+        readMoreBtn.setAttribute('class', 'text-center btn btn-sm btn-info readmore')
+        readMoreBtn.addEventListener('click', ()=>{
+          
+          synop.innerText === displayText ? synop.innerText = fullText : synop.innerText = displayText
+          readMoreBtn.innerText === 'Read More' ? readMoreBtn.innerText = 'Read Less' : readMoreBtn.innerText = 'Read More'
+
+        })
+        textDiv.appendChild(readMoreBtn)
+
+        console.log(synop.innerText === displayText)
+      }
       synop.setAttribute('class', 'synop text-start')
-      textDiv.appendChild(synop)
+      
 
     
   
 }
 
 genAnime()
+
+

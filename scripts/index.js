@@ -35,6 +35,7 @@ try {
 	       pagesDiv.innerHTML = ''
 	       topPages.innerHTML = ''
 	       results.innerHTML=  ''
+		   
 		   localStorage.clear()
 	    } 
 	
@@ -50,7 +51,7 @@ try {
             } else{
                 results.innerText = `Search Results for: "${input.value}"`
             }
-	        results.setAttribute('class', 'h5 mt-5 mb-4 results')
+	        results.setAttribute('class', 'h5 mt-1 mb-4 results')
             results.style.textDecoration = 'none'
             results.style.color = 'white'
 	        animeWrapper.appendChild(results)
@@ -62,7 +63,7 @@ try {
 			
                 //Card Height Equal Div
 	            const animeDiv = document.createElement('div')
-	            animeDiv.setAttribute('class', 'col-12 col-lg-3 col-md-4 col-sm-5 d-flex mx-auto align-items-stretch') 
+	            animeDiv.setAttribute('class', 'col-12 col-lg-3 col-md-4 col-sm-5 d-flex mx-auto anime align-items-stretch') 
 	            animeWrapper.appendChild(animeDiv)
 				
 				//Div Wrapper For Anime Object
@@ -95,7 +96,6 @@ try {
                 animeTitle.setAttribute('class', 'card-title text-wrap anime-title')
 	            cardbodyDiv.appendChild(animeTitle)
 				localStorage.setItem(`title${[i]}`,(animeTitle.innerText))
-                
 				//Rank
 	            const ranking = document.createElement('p')
                 if(anime.data[i].ranking === 0){
