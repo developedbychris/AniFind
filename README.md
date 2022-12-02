@@ -7,7 +7,7 @@
 ## Description
 
 AniFind is a simple app to look up anime based on rank.
-Language used HTML, CSS, JS & Bootstrap 5.0
+Built with HTML, CSS, JS & Bootstrap 5.0
 
 ## Features
 
