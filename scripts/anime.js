@@ -50,7 +50,7 @@ const genAnime = () =>{
       //IMG
       const img = document.createElement('img')
       img.src = localStorage.getItem(`image${animeIndex}`)
-      img.setAttribute('class', 'anime-img2 mb-4')
+      img.setAttribute('class', 'anime-img2 mb-1')
       imageDiv.appendChild(img)
       //TITLE
       const animeTitle = document.createElement('p')
