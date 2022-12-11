@@ -16,6 +16,9 @@ html,body {
 body{
     background-image: linear-gradient(to right top, #f0a6ca, #e0add7, #d0b3de, #c2b9e0, #b8bedd);
     color: white;
+    position: relative;
+    min-height: 100vh;
+    
 }
 
 .title{
@@ -300,19 +303,12 @@ body{
 /* Credit Div*/
 .credit{
     background-color: rgb(80, 66, 102, 0.1);
-    height: 40vh;
-    margin: 0;
     bottom: 0;
     overflow: hidden;
-    max-height: 80vh;
+    position: absolute;
+    
 }
 
-@media only screen and (max-width: 600px) {
-   .credit{
-    height: 43vh;
-    overflow: hidden;
-   }
-}
 
 .git{
     font-family: 'Montserrat', sans-serif;
