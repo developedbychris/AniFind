@@ -36,7 +36,7 @@ try {
 	       topPages.innerHTML = ''
 	       results.innerHTML=  ''
 		   
-		   localStorage.clear()
+		   sessionStorage.clear()
 	    } 
 	
 	    //If API Call is successful
@@ -95,7 +95,7 @@ try {
                 animeTitle.innerText = anime.data[i].title
                 animeTitle.setAttribute('class', 'card-title text-wrap anime-title')
 	            cardbodyDiv.appendChild(animeTitle)
-				localStorage.setItem(`title${[i]}`,(animeTitle.innerText))
+				sessionStorage.setItem(`title${[i]}`,(animeTitle.innerText))
 				//Rank
 	            const ranking = document.createElement('p')
                 if(anime.data[i].ranking === 0){
@@ -105,22 +105,22 @@ try {
                 }
                 ranking.setAttribute('class','card-text anime-subheader')
                 cardbodyDiv.appendChild(ranking)
-                localStorage.setItem(`rank${[i]}`, (anime.data[i].ranking))
+                sessionStorage.setItem(`rank${[i]}`, (anime.data[i].ranking))
 				//Type
 	            const animeType = document.createElement('p')
                 animeType.innerText = `Type: ${anime.data[i].type}`
                 animeType.setAttribute('class','card-text anime-subheader')
 	            cardbodyDiv.appendChild(animeType)
-	            localStorage.setItem(`type${[i]}`, (anime.data[i].type))
+	            sessionStorage.setItem(`type${[i]}`, (anime.data[i].type))
 	            //EXTRA LOCAL STORAGE DATA
-				localStorage.setItem(`id${[i]}`, (anime.data[i]._id))
+				sessionStorage.setItem(`id${[i]}`, (anime.data[i]._id))
 				const regex = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/
-				localStorage.setItem(`jp-title${[i]}`, (anime.data[i].alternativeTitles.filter(title => title.match(regex))))
-				localStorage.setItem(`image${[i]}`, (anime.data[i].image))
-				localStorage.setItem(`mal-link${[i]}`, (anime.data[i].link))
-				localStorage.setItem(`episodes${[i]}`, (anime.data[i].episodes))
-				localStorage.setItem(`synopsis${[i]}`, (anime.data[i].synopsis))
-				localStorage.setItem(`genre${[i]}`, (anime.data[i].genres.join(', ')))				
+				sessionStorage.setItem(`jp-title${[i]}`, (anime.data[i].alternativeTitles.filter(title => title.match(regex))))
+				sessionStorage.setItem(`image${[i]}`, (anime.data[i].image))
+				sessionStorage.setItem(`mal-link${[i]}`, (anime.data[i].link))
+				sessionStorage.setItem(`episodes${[i]}`, (anime.data[i].episodes))
+				sessionStorage.setItem(`synopsis${[i]}`, (anime.data[i].synopsis))
+				sessionStorage.setItem(`genre${[i]}`, (anime.data[i].genres.join(', ')))				
 	            //insert
 	            animeWrapper.insertBefore(animeDiv, pagesDiv)
 	        }
