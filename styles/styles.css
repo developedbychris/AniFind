@@ -16,9 +16,9 @@ html,body {
 body{
     background-image: linear-gradient(to right top, #f0a6ca, #e0add7, #d0b3de, #c2b9e0, #b8bedd);
     color: white;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    
 }
 
 .title{
@@ -305,10 +305,8 @@ body{
     background-color: rgb(80, 66, 102, 0.1);
     bottom: 0;
     overflow: hidden;
-    position: absolute;
-    
+    margin-top: auto;
 }
-
 
 .git{
     font-family: 'Montserrat', sans-serif;
