@@ -15,21 +15,9 @@ const pageID = location.hash.substring(1)
 const params = new URLSearchParams(location.search)
 const animeIndex = parseInt(params.get("a"))
 
-//  Clears localStorage except for requested anime
-for (let i = 0; i < sessionStorage.length; i++) {
-  if (i === animeIndex) {continue}
-  sessionStorage.removeItem(`title${i}`)
-  sessionStorage.removeItem(`rank${i}`)
-  sessionStorage.removeItem(`type${i}`)
-  sessionStorage.removeItem(`id${i}`)
-  sessionStorage.removeItem(`genre${i}`)
-}
-
-
 const genAnime = () =>{   
       //Opens Div
       animeWrapper.style.visibility = 'visible'
-
 
       //CREATING HTML ELEMENTS
       
