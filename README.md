@@ -13,7 +13,7 @@ Built with HTML, CSS, JS & Bootstrap 5.0
 
 - Fast fetch API Load
 - Search Click or Auto-Search
-- List 12 Anime on page
+- [MAL](https://myanimelist.net) Rank System
 - Cross platform
 
 API in use --> [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
