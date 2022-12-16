@@ -11,8 +11,7 @@ Built with HTML, CSS, JS & Bootstrap 5.0
 
 ## Features
 
-- Fast fetch API Load
-- Search Click or Auto-Search
+- Fast API load
 - [MAL](https://myanimelist.net) Rank System
 - Cross platform
 
