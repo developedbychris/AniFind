@@ -16,9 +16,9 @@ Built with HTML, CSS, JS & Bootstrap 5.0
 - [MAL](https://myanimelist.net) Rank System
 - Cross platform
 
-API in use --> [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
+API in use: [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
 
-Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
+Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 
 <h3 align="center">Authors</h3>
