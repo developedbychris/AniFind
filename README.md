@@ -23,6 +23,6 @@ Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 <h3 align="center">Authors</h3>
 
-<h4 align="center"><a href="https://www.github.com/ultimatechrisu">@ultimatechrisu</a></h4>
-<h4 align="center"><a href="https://www.github.com/NirajD10">@NirajD10</a></h4>
+<h4 align="center"><a href="https://www.github.com/ultimatechrisu">@ultimatechrisu</a> - Javascript and CSS Responsiveness</h4>
+<h4 align="center"><a href="https://www.github.com/NirajD10">@NirajD10</a> - CSS Layout and UI</h4>
 
