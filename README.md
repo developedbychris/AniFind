@@ -9,7 +9,7 @@
 AniFind is a simple app to look up anime based on rank.
 Built with HTML, CSS, JS & Bootstrap 5.0.
 
-API in use: [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
+API in use: [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)<br>
 Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 ## Features
