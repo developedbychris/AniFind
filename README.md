@@ -1,4 +1,4 @@
-# AniFind
+
 
 <p align="center">
   <img src="imgs/AniFind_Logo-r.png">
@@ -21,7 +21,7 @@ API in use --> [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
 Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 
-## Authors
+<h1 align="center">Authors</h1>
 
 - [@ultimatechrisu](https://www.github.com/ultimatechrisu)
 - [@NirajD10](https://www.github.com/NirajD10)
