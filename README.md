@@ -3,7 +3,7 @@
 <p align="center">
   <img src="imgs/AniFind_Logo-r.png">
 </p>
-<h2><a href="https://ultimatechrisu.github.io/AniFind/">View Here</a></h2>
+<h3 align ="center"><a href="https://ultimatechrisu.github.io/AniFind/">View Here</a></h3>
 ## Description
 
 AniFind is a simple app to look up anime based on rank.
