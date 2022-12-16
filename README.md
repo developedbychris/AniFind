@@ -3,7 +3,7 @@
 <p align="center">
   <img src="imgs/AniFind_Logo-r.png">
 </p>
-<h3 align ="center"><a href="https://ultimatechrisu.github.io/AniFind/"><ins>View Here</ins></a></h3>
+<h3 align ="center"><a href="https://ultimatechrisu.github.io/AniFind/">View Here 🔗</a></h3>
 
 ## Description
 
