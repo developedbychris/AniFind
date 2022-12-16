@@ -23,5 +23,6 @@ Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 <h1 align="center">Authors</h1>
 
-- [@ultimatechrisu](https://www.github.com/ultimatechrisu)
-- [@NirajD10](https://www.github.com/NirajD10)
+<h3 align="center"><a href="https://www.github.com/ultimatechrisu">@ultimatechrisu</a></h3>
+<h3 align="center"><a href="https://www.github.com/NirajD10">@NirajD10</a></h3>
+
