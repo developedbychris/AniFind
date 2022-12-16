@@ -21,8 +21,8 @@ API in use --> [AnimeDB](https://rapidapi.com/brian.rofiq/api/anime-db/)
 Real-time Website Link [here](https://ultimatechrisu.github.io/AniFind/)
 
 
-<h1 align="center">Authors</h1>
+<h3 align="center">Authors</h3>
 
-<h3 align="center"><a href="https://www.github.com/ultimatechrisu">@ultimatechrisu</a></h3>
-<h3 align="center"><a href="https://www.github.com/NirajD10">@NirajD10</a></h3>
+<h4 align="center"><a href="https://www.github.com/ultimatechrisu">@ultimatechrisu</a></h4>
+<h4 align="center"><a href="https://www.github.com/NirajD10">@NirajD10</a></h4>
 
