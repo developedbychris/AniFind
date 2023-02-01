@@ -106,10 +106,10 @@ const genAnime = () =>{
           readMoreBtn.innerText === 'Read More' ? readMoreBtn.innerText = 'Read Less' : readMoreBtn.innerText = 'Read More'
 
         })
-        
         textDiv.appendChild(readMoreBtn)
       }
-      synop.setAttribute('class', 'synop text-start')
+      synop.innerText.includes('No synopsis available.') 
+      ? synop.setAttribute('class', 'synop text-center') : synop.setAttribute('class', 'synop text-start')
       
 
     
