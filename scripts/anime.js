@@ -82,10 +82,14 @@ const genAnime = () =>{
       //Synopsis
       const synop = document.createElement('p')
       if(sessionStorage.getItem(`synopsis${animeIndex}`).length > 0 && sessionStorage.getItem(`synopsis${animeIndex}`).length < 200){
-        
         synop.innerText = sessionStorage.getItem(`synopsis${animeIndex}`)
         textDiv.appendChild(synop)
-      } else if (sessionStorage.getItem(`synopsis${animeIndex}`).length > 400){
+      }
+      else if(sessionStorage.getItem(`synopsis${animeIndex}`).length === 0){
+        synop.innerText = `No synopsis available. Check MAL for more information.`
+        textDiv.appendChild(synop)
+      }
+      else if (sessionStorage.getItem(`synopsis${animeIndex}`).length > 400){
         
         let displayText = `${sessionStorage.getItem(`synopsis${animeIndex}`).slice(0, 400)}...`
         let fullText = sessionStorage.getItem(`synopsis${animeIndex}`)
